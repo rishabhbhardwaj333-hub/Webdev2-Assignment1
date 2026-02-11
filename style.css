@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #8fb6ff, #8fd3c8);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+/* Main container */
+.container {
+    width: 95%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+}
+
+/* Left form box */
+.eventfors {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.eventfors h2 {
+    margin-bottom: 15px;
+}
+
+.form label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.form textarea {
+    resize: none;
+    height: 70px;
+}
+
+.form input[type="submit"] {
+    margin-top: 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.form input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* Right events section */
+.events {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Buttons row */
+.events button {
+    padding: 8px 14px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #6b5bd2;
+    color: white;
+    font-weight: 600;
+}
+
+.events button:hover {
+    opacity: 0.85;
+}
+
+/* Cards container */
+.cards {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 15px;
+}
+
+/* Event card */
+.card {
+    background: #f9f9ff;
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.card button {
+    margin-top: 8px;
+    background: #e0e7ff;
+    color: #3730a3;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+/* Delete button */
+.dlt {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    cursor: pointer;
+    color: crimson;
+    font-weight: bold;
+    font-size: 18px;
+}
