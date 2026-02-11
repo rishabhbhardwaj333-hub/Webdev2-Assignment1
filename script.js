@@ -1,16 +1,8 @@
 const form=document.querySelector('.form')
-form.addEventListener('submit',(e)=>{
-    const eventTitle = document.querySelector('#eventTitle')
-    const eventDate = document.querySelector('#eventDate')
-    const category = document.querySelector('#category')
-    const description = document.querySelector('#description')
-    const eventCards = document.querySelector('.cards')
+const eventCards=document.querySelector('.cards')
 
+form.addEventListener('submit',(e)=>{
     e.preventDefault()
-    console.log(eventTitle.value)
-    console.log(eventDate.value)
-    console.log(category.value)
-    console.log(description.value)
 
     let title=eventTitle.value
     let date=eventDate.value
@@ -20,29 +12,55 @@ form.addEventListener('submit',(e)=>{
     const card=document.createElement('div')
     card.classList.add('card')
     card.innerHTML=`
-        <h3>${title}</h3>
-        <p>${date}</p>
-        <button>${cat}</button>
-        <p>${desc}</p>
-        <div class="dlt">x</div>
-
+    <h3>${title}</h3>
+    <p> 📆${date}</p>
+    <button>${cat}</button>
+    <p>${desc}</p>
+    <div class="dlt">x</div>
     `
 
-    eventCards.appendChild(card);
+    eventCards.appendChild(card)
 
     const dlt=card.querySelector('.dlt')
     dlt.addEventListener('click',()=>{
         card.remove()
     })
-
 })
 
 document.addEventListener('keydown',(e)=>{
     // console.log(e.key)
 })
 
-document.querySelector('.clearAll').addEventListener('click', () => {
-    document.querySelectorAll('.card').forEach(card => {
+document.querySelector('.clearAll').addEventListener('click',()=>{
+    document.querySelectorAll('.card').forEach((card)=>{
         card.remove()
     })
 })
+
+document.querySelector('.addSample').addEventListener('click', ()=>{
+
+    const card = document.createElement('div')
+    card.classList.add('card')
+
+    card.innerHTML = `
+        <h3>New Event</h3>
+        <p>📆 2026-01-01</p>
+        <button>General</button>
+        <p>Sample description</p>
+        <div class="dlt">x</div>
+    `
+
+    eventCards.appendChild(card)
+
+    const dlt = card.querySelector('.dlt')
+    dlt.addEventListener('click', ()=>{
+        card.remove()
+    })
+})
+
+// git init
+// git add readme.md
+// git commint -m "first commit"
+// git branch -M main
+// git origin-v
+// git push -u origin main

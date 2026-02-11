@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <div class="container">
-        <div class="eventfors">
+        <div class="eventForm">
             <form class="form">
-                <label for="eventTitle">Event title</label>
+                <label for="eventTitle">Event Title: </label>
                 <input type="text" id="eventTitle">
-                <label for="eventDate">Event date</label>
+                <br>
+                <label for="eventDate">Event Date: </label>
                 <input type="date" id="eventDate">
                 <br>
-                <label for="category">Category</label>
+                <label for="category">Category: </label>
                 <select id="category">
-                    <option value="conference">Conference</option>
-                    <option value="workshop">Workshop</option>
+                    <option value="Conference">Conference</option>
+                    <option value="Workshop">Workshop</option>
                     <option value="Meetup">Meetup</option>
                     <option value="Webinar">Webinar</option>
                     <option value="Social">Social</option>
@@ -31,13 +33,18 @@
             </form>
         </div>
         <div class="events">
-            <button>clear all events</button>
-            <button>Add sample events</button>
-            <div class="cards"></div>
+            <button class="clearAll">Clear All Events</button>
+            <button class="addSample">Add sample Events</button>
+            <div class="cards">
+                
+            </div>
         </div>
         <div class="domContainer"></div>
-    </div>
-
-    <script src="./script.js"></script>
+    </div> <br>
+    <div class="card full-width">
+    <h3>DOM Manipulation Demo</h3>
+    <p id="keyDisplay">You Pressed: None</p>
+</div>
+    <script src="script.js"></script>
 </body>
 </html>
